@@ -5,7 +5,7 @@ start = document.querySelector('.start'),
 starterbtn = document.querySelector('.starterbtn'),
 difficulty = document.querySelector('#diff');
 car.classList.add('car');
-localStorage.setItem('Record', '0');
+// localStorage.setItem('Record', '0');
 
 starterbtn.addEventListener('click', startGame);
 document.addEventListener('keydown', startmove);
@@ -25,6 +25,9 @@ const settings = {
 }
 difficulty.addEventListener('change', function(){
     settings.speed = Number(this.value);
+    if(this.value > 2){
+        settings.traffic = 1;
+    }
 });
 function getElementsQuantity(Height){
     return document.documentElement.clientHeight/Height;
