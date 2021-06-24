@@ -10,7 +10,15 @@
 </head>
 <body>
         <div class="score"></div>
-        <div class="start">Чтобы начать игру, кликни сюда</div>
+        <div class="start">
+            <select name="Difficulty" id="diff">
+                <option value="2">Easy</option>
+                <option value="3">Normal</option>
+                <option value="4">Hard</option>
+            </select>
+            <p class = 'starterbtn'>Чтобы начать игру, кликни сюда</p>
+        </div>
         <div class="gameArea"></div>
+        <audio src="music.mp3" loop = 'true' autoplay = 'true'></audio>
 </body>
 </html>
